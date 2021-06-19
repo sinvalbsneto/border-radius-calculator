@@ -1,0 +1,19 @@
+* {
+  max-width: 100vw !important;
+  max-height: 100vh !important;
+}
+
+body {
+  font-family: 'JetBrains Mono', monospace;
+}
+
+.center {
+  display: flex;
+  justify-content: center;
+}
+
+#preview {
+  width: 200px;
+  height: 200px;
+  background-color: #000;
+}
