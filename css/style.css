@@ -17,3 +17,8 @@ body {
   height: 200px;
   background-color: #000;
 }
+
+#css-preview {
+  background-color: darkgray;
+  padding: 20px;
+}
