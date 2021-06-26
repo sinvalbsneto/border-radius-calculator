@@ -34,26 +34,26 @@
           <form>
             <div class="row">
               <label for="top-left">Top Left</label>
-              <input type="range" name="top-left" id="top-left" class="form-range" onchange="changeTopLeft(this.value)"
+              <input type="range" name="top-left" id="top-left" class="form-range" oninput="changeTopLeft(this.value)"
                 value="0">
             </div>
             <br>
             <div class="row">
               <label for="top-right">Top Right</label>
               <input type="range" name="top-right" id="top-right" class="form-range"
-                onchange="changeTopRight(this.value)" value="0">
+                oninput="changeTopRight(this.value)" value="0">
             </div>
             <br>
             <div class="row">
               <label for="bottom-left">Bottom Left</label>
               <input type="range" name="bottom-left" id="bottom-left" class="form-range"
-                onchange="changeBottomLeft(this.value)" value="0">
+                oninput="changeBottomLeft(this.value)" value="0">
             </div>
             <br>
             <div class="row">
               <label for="bottom-right">Bottom Right</label>
               <input type="range" name="bottom-right" id="bottom-right" class="form-range"
-                onchange="changeBottomRight(this.value)" value="0">
+                oninput="changeBottomRight(this.value)" value="0">
             </div>
           </form>
         </div>
@@ -64,6 +64,8 @@
     <div class="col" id="css-col">
       <div class="row center">
         <div id="css-preview" class="col-8">
+          <span>color: <span id="color-css">#000</span>;</span>
+          <br>
           <span>border-top-left-radius: <span id="top-left-css">0%</span>;</span>
           <br>
           <span>border-top-right-radius: <span id="top-right-css">0%</span>;</span>
@@ -71,6 +73,18 @@
           <span>border-bottom-left-radius: <span id="bottom-left-css">0%</span>;</span>
           <br>
           <span>border-bottom-right-radius: <span id="bottom-right-css">0%</span>;</span>
+        </div>
+      </div>
+      <br>
+      <div class="row" id="change-color-box">
+        <div class="row text-center">
+          <label for="color" class="form-label">Change the box color</label>
+        </div>
+        <div class="row center">
+          <div class="col-4">
+            <input type="color" class="form-control form-control-color" id="color" value="#000000"
+              title="Choose your color" oninput="changeColor(this.value)">
+          </div>
         </div>
       </div>
     </div>

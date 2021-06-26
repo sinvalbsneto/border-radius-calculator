@@ -1,11 +1,17 @@
+function getPreviewStyles(style) {
+  let styles = getComputedStyle(preview);
+
+  let funcStyle = styles.getPropertyValue(style);
+
+  return funcStyle;
+}
+
 function changeTopLeft(value) {
   let preview = document.getElementById("preview");
 
   preview.style.borderTopLeftRadius = value + '%';
 
-  let styles = getComputedStyle(preview);
-
-  let border = styles.getPropertyValue("border-top-left-radius");
+  let border = getPreviewStyles("border-top-left-radius");
 
   let topLeftCSS = document.getElementById("top-left-css");
 
@@ -17,9 +23,7 @@ function changeTopRight(value) {
 
   preview.style.borderTopRightRadius = value + '%';
 
-  let styles = getComputedStyle(preview);
-
-  let border = styles.getPropertyValue("border-top-right-radius");
+  let border = getPreviewStyles("border-top-right-radius");
 
   let topRightCSS = document.getElementById("top-right-css");
 
@@ -31,9 +35,7 @@ function changeBottomLeft(value) {
 
   preview.style.borderBottomLeftRadius = value + '%';
 
-  let styles = getComputedStyle(preview);
-
-  let border = styles.getPropertyValue("border-bottom-left-radius");
+  let border = getPreviewStyles("border-bottom-left-radius");
 
   let bottomLeftCSS = document.getElementById("bottom-left-css");
 
@@ -45,11 +47,21 @@ function changeBottomRight(value) {
 
   preview.style.borderBottomRightRadius = value + '%';
 
-  let styles = getComputedStyle(preview);
-
-  let border = styles.getPropertyValue("border-bottom-right-radius");
+  let border = getPreviewStyles("border-bottom-right-radius");
 
   let bottomRightCSS = document.getElementById("bottom-right-css");
 
   bottomRightCSS.innerHTML = border;
+}
+
+function changeColor(value) {
+  let preview = document.getElementById("preview");
+
+  preview.style.backgroundColor = value;
+
+  let color = getPreviewStyles("background-color");
+
+  let colorCSS = document.getElementById("color-css");
+
+  colorCSS.innerHTML = color;
 }
